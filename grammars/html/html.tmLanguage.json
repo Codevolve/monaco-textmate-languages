@@ -327,7 +327,7 @@
                           "name": "comment.block.js"
                         },
                         {
-                          "include": "source.js"
+                          "include": "source.js.jsx"
                         }
                       ]
                     }
@@ -524,9 +524,6 @@
     "embedded-code": {
       "patterns": [
         {
-          "include": "#smarty"
-        },
-        {
           "include": "#python"
         }
       ]
@@ -558,33 +555,6 @@
       "patterns": [
         {
           "include": "source.python"
-        }
-      ]
-    },
-    "smarty": {
-      "patterns": [
-        {
-          "begin": "(\\{(literal)\\})",
-          "captures": {
-            "1": {
-              "name": "source.smarty.embedded.html"
-            },
-            "2": {
-              "name": "support.function.built-in.smarty"
-            }
-          },
-          "end": "(\\{/(literal)\\})"
-        },
-        {
-          "begin": "{{|{",
-          "disabled": 1,
-          "end": "}}|}",
-          "name": "source.smarty.embedded.html",
-          "patterns": [
-            {
-              "include": "source.smarty"
-            }
-          ]
         }
       ]
     },
